@@ -1,37 +1,79 @@
-{% load staticfiles %}
 
+
+{% load staticfiles %}
+<!DOCTYPE html>
 <html>
   <head>
     <title>My New Website</title>
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
-    <!--Let browser know website is optimized for mobile-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
   </head>
   <body>
-    <div class="page-header">
-      <h1><a href="/"> Skotieono's Blog</a></h1>
-    </div>
+      <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Logo</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
 
+          <ul id="nav-mobile" class="side-nav">
+            <li><a href="#">Navbar Link</a></li>
+          </ul>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+        </div>
+      </nav>
+      <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+          <br><br>
+          <h1 class="header center orange-text">Skotieono's Blog</h1>
+          <div class="row center">
+            <h5 class="header col s12 light">A new website created by me, very much under construction</h5>
+          </div>
+          <br><br>
 
-    <div class="container">
-      <h1 class="header center orange-text">Skotieono's Blog</h1>
-    <div class="row center">
-      <h5 class="header col1 s12 light">This is my new website, thanks for checking it out!</h5>
-    </div>
+        </div>
       </div>
 
-    </div>
+          <!--   Icon Section   -->
+          <div class="row">
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+                <h5 class="center">Speeds up development</h5>
 
-  </div>
+                <p class="light">We did most of the heavy lifting for you to provide a default stylings that incorporate our custom components. Additionally, we refined animations and transitions to provide a smoother experience for developers.</p>
+              </div>
+            </div>
 
-</div>
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center light-blue-text"><i class="material-icons">group</i></h2>
+                <h5 class="center">User Experience Focused</h5>
+
+                <p class="light">By utilizing elements and principles of Material Design, we were able to create a framework that incorporates components and animations that provide more feedback to users. Additionally, a single underlying responsive system across all platforms allow for a more unified user experience.</p>
+              </div>
+            </div>
+
+            <div class="col s12 m4">
+              <div class="icon-block">
+                <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+                <h5 class="center">Easy to work with</h5>
+
+                <p class="light">We have provided detailed documentation as well as specific code examples to help new users get started. We are also always open to feedback and can answer any questions a user may have about Materialize.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <br><br>
+      </div>
+
     {% for post in posts %}
         <div class="post">
             <p>published: {{ post.published_date }}</p>
