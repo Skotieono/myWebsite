@@ -1,37 +1,36 @@
+
+
 {% load staticfiles %}
-
 <!DOCTYPE html>
+<html>
+  <head>
+    <title>My New Website</title>
 
-    <html>
-        <head>
-            <meta charset="utf-8">
-            <title>Skotieono's Blog</title>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
-            <!--Import Google Icon Font-->
-            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-            <!-- Compiled and minified CSS -->
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
-            <!-- Compiled and minified JavaScript -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
-            <link rel="stylesheet" href="{% static 'css/blog.css' %}">
-
-        </head>
-        <body>
-        <div class="section no-pad-bot" id="index-banner">
-            <div class="container">
+  </head>
+<body>
+    <div class="page-header">
+        <h1><a href="/">Skotieono's Blog</a></h1>
+    </div>
+    <div class="content container">
+        <div class="row center">
             <br><br>
-                <h1 class="header center orange-text">Starter Template</h1>
-                    <div class="row center">
-              <h5 class="header col s12 light">A modern responsive front-end framework based on Material Design</h5>
-                    </div>
-                    {% block content %}
-                    {% endblock %}
-            </div>
+            {% block content %}
+            {% endblock %}
         </div>
+    </div>
 
-            <!--Import jQuery before materialize.js-->
-            <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-            <script type="text/javascript" src="js/materialize.min.js"></script>
+          <!--Import jQuery before materialize.js-->
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <!-- Compiled and minified JavaScript -->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 
-        </body>
-    </html>
+  </body>
+</html>
