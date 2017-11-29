@@ -4,33 +4,49 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My New Website</title>
+    <meta charset="utf-8">
+
 
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/blog.css' %}">
 
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <meta http-equiv="X-UA-Compatible" content="ie-edge"> -->
+
+        <title>My New Website</title>
   </head>
+
 <body>
-    <div class="page-header">
-        <h1><a href="/">Skotieono's Blog</a></h1>
-    </div>
-    <div class="content container">
-        <div class="row center">
-            <br><br>
-            {% block content %}
-            {% endblock %}
+    <!-- Nav section -->
+    <nav>
+        <div class="nav-wrapper">
+            <a href="#!" class="brand-logo">Skotieono Johnson</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
         </div>
-    </div>
+    </nav>
+
+
 
           <!--Import jQuery before materialize.js-->
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
           <!-- Compiled and minified JavaScript -->
           <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+          <script type="text/javascript" src="{% static 'js\scripts.js' %}"></script>
 
   </body>
 </html>
